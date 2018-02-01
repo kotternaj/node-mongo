@@ -3,7 +3,7 @@ const assert = require('assert');
 const dboper = require('./operations');
 const url = 'mongodb://localhost:27017/confusion';
 
-MongoClient.connect(url, (err, db) => {
+MongoClient.connect(url).then((db) => {
 
     assert.equal(err,null);
 
